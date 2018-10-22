@@ -1,0 +1,23 @@
+.todoEditContainer {
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+}
+
+.todoInput {
+    width: 75%;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    flex-grow: 1;
+}
+
+.isfocused {
+    box-shadow: 0 0 37px rgb(21, 179, 252) !important;
+}
+
+.todoButton {
+    min-width: 36px;
+    margin-left: 10px;
+}

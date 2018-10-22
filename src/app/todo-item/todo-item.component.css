@@ -1,0 +1,12 @@
+.todoItemText {
+    margin-left: 20px;
+}
+
+.todoItemContainer {
+    margin-bottom: 10px;
+}
+
+.todoDone {
+  color: gray;
+  text-decoration:line-through;
+}

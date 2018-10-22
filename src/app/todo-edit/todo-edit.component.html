@@ -1,0 +1,48 @@
+<form [formGroup]="formTodoEdit">
+
+
+  <mat-card class="todoEditContainer" [class.isfocused] = isFocused>
+        <input formControlName="todoText"  
+          placeholder="I am going to ..." 
+          [type]='text' class="todoInput"
+          (focus)="inputFocused(true)"
+          (focusout)="inputFocused(false)"
+          #todoText
+          >
+
+        <button class="todoButton"   
+                mat-raised-button
+                matTooltip="add new todo"
+                matTooltipPosition="left"
+                [disabled]="!isEnabledAddButton"
+                (click) = "onAddTodo(todoText.value)"
+                #buttonAdd
+        >
+      <mat-icon>add</mat-icon>
+    </button>
+    
+    <button class="todoButton" 
+            mat-raised-button
+            matTooltip="delete done todo"
+            matTooltipPosition="right"
+            [disabled] = "!isEnabledDeleteDoneButton"
+            (click) = "onDeleteDoneTodos()"
+    >
+
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card>
+
+
+</form>
+
+<!--
+<div class="example-container" class="todoEditContainer">
+  <mat-form-field appearance="outline" class="todoEdit">
+        <input formControlName="todoText" matInput placeholder="I am going to ..." [type]= 'text'>
+      <button matSuffix mat-icon-button mat-raised-button>
+        <mat-icon>add</mat-icon>
+      </button>
+  </mat-form-field>
+</div>
+-->

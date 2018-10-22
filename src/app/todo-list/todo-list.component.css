@@ -1,0 +1,30 @@
+.todoListContainer {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.todoList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todosFilterInfo {
+  float: right;
+  font-weight: normal;
+}
+
+.todosFilter {
+  float: right;
+  position: relative;
+  left: 10px;
+  top: -5px;
+  margin-left: -10px;
+}
+.active {
+  background-color: aqua;
+  color: white;
+}
+.active:hover{
+  background-color: aqua;
+  color: white;
+}

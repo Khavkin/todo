@@ -1,0 +1,33 @@
+<div class="todoListContainer">
+  <h2>Todo list 
+    <button class="todosFilter" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>filter_list</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [ngClass]="{ active: filterOption === 'ALL'}" (click)="onSetFilter('ALL')">
+        <mat-icon>list</mat-icon>
+        <span>ALL</span>
+      </button>
+      <button mat-menu-item [ngClass]="{ active: filterOption === 'DONE'}" (click)="onSetFilter('DONE')">
+        <mat-icon>done</mat-icon>
+        <span>Done</span>
+      </button>
+      <button mat-menu-item [ngClass]="{ active: filterOption === 'ACTIVE'}" (click)="onSetFilter('ACTIVE')">
+        <mat-icon>work</mat-icon>
+        <span>Active</span>
+      </button>
+    </mat-menu>
+    <mat-chip-list class="todosFilterInfo">
+      <mat-chip [disabled] >displaing {{todosCount}} todos</mat-chip>
+    </mat-chip-list>
+  </h2>
+
+  <ul class="todoList">
+    <li *ngFor="let todo of todos">
+      <app-todo-item 
+        [todo]=todo (updateTodo)='onUpdateTodo($event)'
+      >
+      </app-todo-item></li>
+  </ul>
+  
+</div>

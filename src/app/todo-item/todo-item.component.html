@@ -1,0 +1,9 @@
+<mat-card class="todoItemContainer">
+
+  <mat-checkbox [checked]="todo.is_checked" (change) = isChecked()></mat-checkbox> 
+  <span class="todoItemText"
+      [ngClass]= "{ todoDone: todo.is_checked}"
+      (click) = isChecked()
+  >{{todo.description}}</span>
+  
+</mat-card>
